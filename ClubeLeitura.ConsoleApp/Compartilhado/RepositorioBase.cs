@@ -20,20 +20,13 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
 
         public void Editar(int numeroSelecionado, T entidade)
         {
-            for (int i = 0; i < registros.Count; i++)
-            {
-                if (registros[i].numero == numeroSelecionado)
-                {
-                    entidade.numero = numeroSelecionado;
-                    registros[i] = entidade;
-                    break;
-                }
-            }
+            //editar
         }
 
         public void Excluir(int numeroSelecionado)
         {
-            registros.RemoveAt(numeroSelecionado);
+            T registro = registros.Find(x => x.numero == numeroSelecionado);
+            registros.Remove(registro);
         }
 
         public EntidadeBase SelecionarRegistro(int numeroRegistro)
