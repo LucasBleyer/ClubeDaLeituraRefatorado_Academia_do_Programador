@@ -28,7 +28,6 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
                     registros[i] = entidade;
                     break;
                 }
-
             }
         }
 
