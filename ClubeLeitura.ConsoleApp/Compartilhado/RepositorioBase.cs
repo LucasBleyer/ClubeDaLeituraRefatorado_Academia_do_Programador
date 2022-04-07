@@ -40,11 +40,7 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
 
         public bool ExisteRegistro(int numeroRegistro)
         {
-            foreach (EntidadeBase registro in registros)
-                if (registro.numero == numeroRegistro)
-                    return true;
-
-            return false;
+            return registros.Exists(x => x.numero == numeroRegistro);
         }
     }
 }
