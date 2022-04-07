@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClubeLeitura.ConsoleApp.ModuloRevista.TelaCadastroRevista">
+    <Position X="6.75" Y="0.5" Width="2" />
+    <AssociationLine Name="telaCadastroCaixa" Type="ClubeLeitura.ConsoleApp.ModuloCaixa.TelaCadastroCaixa" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="2.438" />
+        <Point X="10.5" Y="2.438" />
+        <Point X="10.5" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AhAAAIEAAAAAAAAAAEAAQAAAAAAACAACEAAAAAADQAA=</HashCode>
+      <FileName>ModuloRevista\TelaCadastroRevista.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="telaCadastroCaixa" />
+      <Field Name="repositorioCaixa" />
+      <Field Name="repositorioRevista" />
+      <Field Name="notificador" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClubeLeitura.ConsoleApp.ModuloRevista.RepositorioRevista">
+    <Position X="3.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAEEgAAAQAAAAAAAAAhAAAAgAAQAAA=</HashCode>
+      <FileName>ModuloRevista\RepositorioRevista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClubeLeitura.ConsoleApp.Compartilhado.Notificador">
+    <Position X="6.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compartilhado\Notificador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClubeLeitura.ConsoleApp.ModuloCaixa.RepositorioCaixa">
+    <Position X="12" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAEAggAAQBAgAAAAAABAgAAgAAQAAA=</HashCode>
+      <FileName>ModuloCaixa\RepositorioCaixa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClubeLeitura.ConsoleApp.ModuloCaixa.TelaCadastroCaixa">
+    <Position X="9.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAEAAAAAAAEQAACgAAAEAAAAAAAACgAACQAA=</HashCode>
+      <FileName>ModuloCaixa\TelaCadastroCaixa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
