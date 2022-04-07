@@ -2,9 +2,12 @@
 
 namespace ClubeLeitura.ConsoleApp.Compartilhado
 {
-    public class RepositorioBase
+    public class RepositorioBase<T> where T : EntidadeBase
     {
         protected readonly List<EntidadeBase> registros;
+
+        protected readonly List<T> listaRegistros = new List<T>();
+
         protected int contadorNumero;
 
         public RepositorioBase()
@@ -34,7 +37,6 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
                 }
             }
         }
-
         public bool Excluir(int numeroSelecionado)
         {
             EntidadeBase entidadeSelecionada = SelecionarRegistro(numeroSelecionado);
