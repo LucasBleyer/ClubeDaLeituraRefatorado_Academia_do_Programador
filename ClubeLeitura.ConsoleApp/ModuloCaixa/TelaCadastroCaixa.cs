@@ -95,7 +95,7 @@ namespace ClubeLeitura.ConsoleApp.ModuloCaixa
             if (tipo == "Tela")
                 MostrarTitulo("Visualização de Caixas");
 
-            List<EntidadeBase> caixas = repositorioCaixa.SelecionarTodos();
+            List<Caixa> caixas = repositorioCaixa.SelecionarTodos();
 
             if (caixas.Count == 0)
                 return false;

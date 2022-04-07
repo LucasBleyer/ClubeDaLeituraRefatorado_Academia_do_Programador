@@ -133,7 +133,7 @@ namespace ClubeLeitura.ConsoleApp.ModuloReserva
             if (tipo == "Tela")
                 MostrarTitulo("Visualização de Reservas");
 
-            List<EntidadeBase> reservas = repositorioReserva.SelecionarTodos();
+            List<Reserva> reservas = repositorioReserva.SelecionarTodos();
 
             if (reservas.Count == 0)
                 return false;

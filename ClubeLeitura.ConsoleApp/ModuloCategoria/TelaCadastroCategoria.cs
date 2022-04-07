@@ -76,7 +76,7 @@ namespace ClubeLeitura.ConsoleApp.ModuloCategoria
             if (tipo == "Tela")
                 MostrarTitulo("Visualização de Categorias");
 
-            List<EntidadeBase> categorias = repositorioCategoria.SelecionarTodos();
+            List<Categoria> categorias = repositorioCategoria.SelecionarTodos();
 
             if (categorias.Count == 0)
                 return false;

@@ -113,7 +113,7 @@ namespace ClubeLeitura.ConsoleApp.ModuloAmigo
             if (tipo == "Tela")
                 MostrarTitulo("Visualização de Amigos");
 
-            List<EntidadeBase> amigos = repositorioAmigo.SelecionarTodos();
+            List<Amigo> amigos = repositorioAmigo.SelecionarTodos();
 
             if (amigos.Count == 0)
                 return false;

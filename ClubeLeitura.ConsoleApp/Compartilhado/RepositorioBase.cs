@@ -12,9 +12,10 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
             registros = new List<T>();
         }
 
-        public virtual void Inserir(EntidadeBase entidade)
+        public virtual string Inserir(T entidade)
         {
-            registros.Add((T)entidade);
+            registros.Add(entidade);
+            return "Inserido com Sucesso!";
         }
 
         public void Editar(int numeroSelecionado, EntidadeBase entidade)
@@ -22,9 +23,9 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
             registros.Remove(registros.Find(x => x.numero == numeroSelecionado));
 
         }
-        public bool Excluir(T entidade)
+        public void Excluir(int numeroSelecionado)
         {
-            return registros.Remove(entidade);
+            registros.RemoveAt(numeroSelecionado);
         }
 
         public EntidadeBase SelecionarRegistro(int numeroRegistro)
@@ -32,9 +33,9 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
             return registros.Find(x => x.numero == numeroRegistro);
         }
 
-        public EntidadeBase[] SelecionarTodos()
+        public List<T> SelecionarTodos()
         {
-            return registros.ToArray();
+            return registros;
         }
 
         public bool ExisteRegistro(int numeroRegistro)

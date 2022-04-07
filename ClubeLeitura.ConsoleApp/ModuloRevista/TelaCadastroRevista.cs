@@ -108,7 +108,7 @@ namespace ClubeLeitura.ConsoleApp.ModuloRevista
             if (tipo == "Tela")
                 MostrarTitulo("Visualização de Revistas");
 
-            List<EntidadeBase> revistas = repositorioRevista.SelecionarTodos();
+            List<Revista> revistas = repositorioRevista.SelecionarTodos();
 
             if (revistas.Count == 0)
                 return false;

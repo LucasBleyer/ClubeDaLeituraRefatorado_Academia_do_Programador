@@ -184,7 +184,7 @@ namespace ClubeLeitura.ConsoleApp.ModuloEmprestimo
             if (tipo == "Tela")
                 MostrarTitulo("Visualização de Empréstimos");
 
-            List<EntidadeBase> emprestimos = repositorioEmprestimo.SelecionarTodos();
+            List<Emprestimo> emprestimos = repositorioEmprestimo.SelecionarTodos();
 
             if (emprestimos.Count == 0)
                 return false;
