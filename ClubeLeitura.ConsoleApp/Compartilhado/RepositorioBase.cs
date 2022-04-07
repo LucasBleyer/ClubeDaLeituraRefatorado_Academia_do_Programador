@@ -4,63 +4,37 @@ namespace ClubeLeitura.ConsoleApp.Compartilhado
 {
     public class RepositorioBase<T> where T : EntidadeBase
     {
-        protected readonly List<EntidadeBase> registros;
-
-        protected readonly List<T> listaRegistros = new List<T>();
-
+        protected readonly List<T> registros = new List<T>();
         protected int contadorNumero;
 
         public RepositorioBase()
         {
-            registros = new List<EntidadeBase>();
+            registros = new List<T>();
         }
 
-        public virtual string Inserir(EntidadeBase entidade)
+        public virtual void Inserir(EntidadeBase entidade)
         {
-            entidade.numero = ++contadorNumero;
-
-            registros.Add(entidade);
-
-            return "REGISTRO_VALIDO";
+            registros.Add((T)entidade);
         }
 
         public void Editar(int numeroSelecionado, EntidadeBase entidade)
         {
-            for (int i = 0; i < registros.Count; i++)
-            {
-                if (registros[i].numero == numeroSelecionado)
-                {
-                    entidade.numero = numeroSelecionado;
-                    registros[i] = entidade;
+            registros.Remove(registros.Find(x => x.numero == numeroSelecionado));
 
-                    break;
-                }
-            }
         }
-        public bool Excluir(int numeroSelecionado)
+        public bool Excluir(T entidade)
         {
-            EntidadeBase entidadeSelecionada = SelecionarRegistro(numeroSelecionado);
-
-            if (entidadeSelecionada == null)
-                return false;
-
-            registros.Remove(entidadeSelecionada);
-
-            return true;
+            return registros.Remove(entidade);
         }
 
         public EntidadeBase SelecionarRegistro(int numeroRegistro)
         {
-            foreach (EntidadeBase registro in registros)
-                if (numeroRegistro == registro.numero)
-                    return registro;
-
-            return null;
+            return registros.Find(x => x.numero == numeroRegistro);
         }
 
-        public List<EntidadeBase> SelecionarTodos()
+        public EntidadeBase[] SelecionarTodos()
         {
-            return registros;
+            return registros.ToArray();
         }
 
         public bool ExisteRegistro(int numeroRegistro)

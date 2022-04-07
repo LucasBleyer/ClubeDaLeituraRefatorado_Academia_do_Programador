@@ -1,14 +1,9 @@
-﻿
-using ClubeLeitura.ConsoleApp.Compartilhado;
+﻿using ClubeLeitura.ConsoleApp.Compartilhado;
 
 namespace ClubeLeitura.ConsoleApp.ModuloCaixa
 {
-    public class RepositorioCaixa : RepositorioBase
+    public class RepositorioCaixa : RepositorioBase<Caixa>
     {
-        public RepositorioCaixa()
-        {
-        }
-
         public bool EtiquetaJaUtilizada(string etiquetaInformada)
         {
             foreach (Caixa caixa in registros)

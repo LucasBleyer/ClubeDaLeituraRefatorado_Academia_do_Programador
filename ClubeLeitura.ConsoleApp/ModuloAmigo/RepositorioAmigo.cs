@@ -1,14 +1,11 @@
 ﻿using ClubeLeitura.ConsoleApp.Compartilhado;
 using System.Collections.Generic;
+using ClubeLeitura.ConsoleApp.ModuloAmigo;
 
 namespace ClubeLeitura.ConsoleApp.ModuloAmigo
 {
-    public class RepositorioAmigo : RepositorioBase
+    public class RepositorioAmigo : RepositorioBase<Amigo>
     {
-        public RepositorioAmigo()
-        {
-        }
-
         public List<Amigo> SelecionarAmigosComMulta()
         {
             List<Amigo> amigosComMulta = new List<Amigo>();
